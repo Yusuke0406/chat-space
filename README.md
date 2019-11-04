@@ -38,7 +38,7 @@ Things you may want to cover:
 |id|integer||
 |name|string|index:true,null:false,unique:true|
 ### Association
-- has_many :users
+- has_many :users, through: :group_users
 - has many :messages
 
 ##userテーブル
@@ -48,14 +48,14 @@ Things you may want to cover:
 |name|string|index:true.null:false,unique:true|
 |email|string|index:true,null:false,unique:true|
 ### Association
--has_many :groups
+-has_many :groups, through: :group_users
 -has_many :messages
 
 ##messageテーブル
 |Column|Type|Option|
 |------|----|------|
 |id|integer|
-|body|text|null:false|
+|body|text|
 |image|string|
 |user_id|integer|null :false, foreign_key: true|
 |group_id|integer|null:false, foreign_key:true|
