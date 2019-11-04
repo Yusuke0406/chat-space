@@ -57,7 +57,7 @@ Things you may want to cover:
 |id|integer|
 |body|text|
 |image|string|
-|user_id|integer|null :false, foreign_key: true|
+|user_id|integer|null:false, foreign_key: true|
 |group_id|integer|null:false, foreign_key:true|
 ### Association
 -belongs to :user
