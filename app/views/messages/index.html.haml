@@ -1,0 +1,59 @@
+!!!
+%html 
+  %body
+    -# .flash-box
+    -#   ログインしました
+    .chat-side
+      .side-header
+        .side-header__box
+          .side-header__box__name
+            = fa_icon 'twitter'
+          .side-header__box__menu
+            .side-header__box__menu__left
+              = fa_icon 'facebook'
+            .side-header__box__menu__right
+              = fa_icon 'instagram'
+      .groups
+        .group
+          .group__name
+            sample
+          .group__message
+            Hello world
+
+    .chat-main
+      .main-header
+        .main-header__left
+          .main-header__left__group
+            sample
+          .main-header__left__member
+            seo
+            asano
+        .main-header__edit-btn
+          Edit
+
+      .messages
+        .message
+          .message__top
+            .message__top__name
+              yusuke
+            .message__top__date
+              2019/11/05(Tue)17:14:34
+          .message__text
+            頑張りましょう！
+        .message
+          .message__top
+            .message__top__name
+              montani
+            .message__top__date
+              2019/11/05(Tue)16:17:39
+          .message__text
+            hello world
+
+      .form
+        .input-box
+          %input.input-text{:name=>"text", :placeholder=>"Type a message",:type=>"text"}/
+          .image
+            = fa_icon 'instagram'
+          %input.input-btn{:name=>"submit", :value=>"Send", :type=>"submit"}/
+      
+            
