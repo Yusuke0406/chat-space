@@ -58,3 +58,7 @@ gem "font-awesome-rails"
 	
 gem "haml-rails", ">= 1.0", '<= 2.0.1'
 
+group :development do
+  gem 'devise'
+end
+
