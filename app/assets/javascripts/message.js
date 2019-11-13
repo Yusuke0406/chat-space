@@ -20,6 +20,8 @@ $(function(){
        </div>`
      return html;
    } else {
+     var image = message.image;
+     var image = ""
      var html =
       `<div class="message" data-message-id=${message.id}>
          <div class="upper-message">
@@ -35,8 +37,8 @@ $(function(){
              ${message.content}
            </p>
          </div>
+         ${image}
        </div>`
-       message.image="";
      return html;
    };
  }
