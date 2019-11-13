@@ -36,6 +36,7 @@ $(function(){
            </p>
          </div>
        </div>`
+       message.image="";
      return html;
    };
  }
