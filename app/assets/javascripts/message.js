@@ -46,7 +46,7 @@ $('#new_comment').on('submit', function(e){
 })
     var reloadMessages = function(){
       if (window.location.href.match(/\/groups\/\d+\/messages/)){
-      var last_message_id = $('.message:last').data("id");
+        last_message_id = $('.message:last').data("message-id");
       $.ajax({
         url:"api/messages",
         type:'GET',
@@ -54,7 +54,6 @@ $('#new_comment').on('submit', function(e){
         data:{id:last_message_id}
       })
       .done(function(messages){
-        console.log("aaa")
         var insertHTML = '';
         messages.forEach(function(message){
           insertHTML = buildHTML(message);
@@ -62,11 +61,10 @@ $('#new_comment').on('submit', function(e){
         })
       })
         .fail(function(){
-          console.log(location.href)
           alert('error');
         });
       }
-    }
+    };
     setInterval(reloadMessages, 7000);
 })
 
