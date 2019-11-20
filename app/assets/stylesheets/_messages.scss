@@ -22,9 +22,15 @@
       width: 100%;
       font-weight: bold;
       display: flex;
-     &__menu{
+      &__name{
+        font-weight: bold;
+      }
+      &__menu{
         display: flex;
         margin-block-start: 5px;
+        .icon{
+          color: white;
+        }
         &__left{
           padding-right: 10px;
         }
@@ -82,6 +88,10 @@
       position: absolute;
       right: 40px;
       color: #38aef0;
+      a:-webkit-any-link{
+        color:#38aef0;
+        text-decoration: none;
+      }
     }
   }
   .messages {
@@ -139,7 +149,7 @@
       }
     }
     &__submit {
-      background-color: lightblue;
+      background-color: #38aef0;
       border: none;
       color: white;
       float: right;
